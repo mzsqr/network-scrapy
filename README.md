@@ -30,7 +30,9 @@
    ```
    4. 输入如下命令克隆仓库并且切换分支，不要在master分支上修改：
    ```
-   git clone 项目地址
+   git clone git@github.com:mzsqr/network-scrapy.git
+   # 或者git clone https://github.com/mzsqr/network-scrapy.git
+   # 区别就是上面那个要在自己的电脑上个加上公钥，下面这个输入账号密码
    git switch dev
    ```
 4. 创建Python虚拟环境：进入virus目录，打开命令行输入如下命令：
@@ -48,9 +50,22 @@ pip install scrapy
 ```
 scrapy genspider 爬虫文脚本的名字 爬取的网页（不需要协议）
 ```
+----
 
 ### 注意事项
 
 - 不一定要用Python的虚拟环境，只是为了避免各个库之间的污染
 - 如果使用了Python的虚拟环境，必须要每次运行命令之前都使用active脚本启动
 - 上述只是一个项目搭建的过程，实际上的使用要自己探索
+
+---
+
+### 一些你可能用到的Git命令
+
+```
+git add . # 添加修改到本地
+git commit -m "你的注释" # 提交本地修改到本地仓库
+git pull # 拉取远程仓库，每次上传之前都要输入这个命令
+git push # 上传内容，上传之前要先做上面的三个操作
+```
+其实IDE中都有可视化操作，不过我不喜欢
