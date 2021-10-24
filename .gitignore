@@ -2,3 +2,5 @@
 venv
 # 李屹荣使用的目标文件，用于储存生成的文件
 target
+# IDEA
+.idea
