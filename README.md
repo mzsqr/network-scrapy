@@ -46,7 +46,7 @@ virtualenv venv
 ```
 pip install scrapy
 ```
-6. 新建自己的爬虫脚本：进入到virus\virus\spiders文件夹，在命令行输入以下命令
+6. 新建自己的爬虫脚本：进入到virus\virus\spiders文件夹，在命令行输入以下命令（或者自己直接在里面创建也可以，参考示例文件）
 ```
 scrapy genspider 爬虫文脚本的名字 爬取的网页（不需要协议）
 ```
@@ -69,3 +69,20 @@ git pull # 拉取远程仓库，每次上传之前都要输入这个命令
 git push # 上传内容，上传之前要先做上面的三个操作
 ```
 其实IDE中都有可视化操作，不过我不喜欢
+
+----
+
+### 示例爬虫
+
+文件./virus/spiders/quotes_spider.py是示例文件，一下是关于运行示例文件的说明：
+
+1. 示例文件时一个最基本的爬虫，爬取网页"http://quotes.toscrape.com/page/1/"的内容，你可以打开查看网页结构
+2. 在运行之前你需要先在项目的根目录创建一个target文件夹，或者更改一下行的内容：
+```
+filename = f"target/quotes-{page}.html" # line26 表示爬取的网页的储存位置
+```
+3. 在项目根目录下使用终端运行如下命令：
+```
+scrapy crawl quotes
+```
+4. 查看target目录下会有一些网页，实际上应该在爬取的时候就处理这些网页的Response，得到需要得到数据即可，不过这里为了简单就不处理了
