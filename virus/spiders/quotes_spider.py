@@ -23,7 +23,7 @@ class QuotesSpider(scrapy.Spider):
     # 这样就形成了爬虫链
     def parse(self, response, **kwargs):
         page = response.url.split("/")[-2]
-        filename = f"target/quotes-{page}.html"
-        with open(filename, "w+") as f:
+        filename = f"target/example/quotes-{page}.html"
+        with open(filename, "wb") as f:
             f.write(response.body)
         self.log(f"Saved file {filename}")
