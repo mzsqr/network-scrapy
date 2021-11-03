@@ -6,3 +6,5 @@ target
 .idea
 # example
 example
+# 缓存
+__pycache__
