@@ -73,4 +73,3 @@ class ZhihuPlague(scrapy.Spider):
             with open("target/zhihu/"+filename, "wb") as fd:
                 fd.write(response.body)
             self.log(f"saved file {filename}")
-
