@@ -8,7 +8,7 @@ class ZhihuPlague(scrapy.Spider):
     name = "zhihu_plague"
 
     def start_requests(self):
-        for word in ["新冠", "黑死病"]:
+        for word in ["黑死病", "新冠"]:
             for i in range(10):
                 cookies = {
                     "__snaker__id": "jbRqAqaflv9uCokh",
