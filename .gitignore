@@ -7,4 +7,5 @@ target
 # example
 example
 # 缓存
-__pycache__
+virus/spiders/__pycache__
+virus/__pycache__
