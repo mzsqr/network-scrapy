@@ -4,3 +4,6 @@ venv
 target
 # IDEA
 .idea
+# 不能加上缓存
+virus/__pycache__
+virus/spiders/__pycache__
