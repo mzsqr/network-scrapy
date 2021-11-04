@@ -9,3 +9,5 @@ example
 # 缓存
 virus/spiders/__pycache__
 virus/__pycache__
+# VSCode
+.vscode
